@@ -1,0 +1,6 @@
+<tool name="gmake" version="4.2.1-pafccj">
+  <client>
+    <environment name="MAKE_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/gmake/4.2.1-pafccj"/>
+  </client>
+  <runtime name="PATH" value="$MAKE_BASE/bin" type="path"/>
+</tool>

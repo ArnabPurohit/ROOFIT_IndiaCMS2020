@@ -1,0 +1,11 @@
+<tool name="python3" version="3.6.4-pafccj">
+  <lib name="python3.6m"/>
+  <client>
+    <environment name="PYTHON3_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/python3/3.6.4-pafccj"/>
+    <environment name="LIBDIR" default="$PYTHON3_BASE/lib"/>
+    <environment name="INCLUDE" default="$PYTHON3_BASE/include/python3.6m"/>
+    <environment name="PYTHON3_COMPILE" default="$PYTHON3_BASE/lib/python3.6/compileall.py"/>
+  </client>
+  <runtime name="PATH" value="$PYTHON3_BASE/bin" type="path"/>
+  <use name="sockets"/>
+</tool>

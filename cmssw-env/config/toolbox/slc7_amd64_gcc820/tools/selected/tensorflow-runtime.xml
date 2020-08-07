@@ -1,0 +1,4 @@
+<tool name="tensorflow-runtime" version="1.6.0-pafccj3">
+  <lib name="tf_aot_runtime"/>
+  <use name="tensorflow"/>
+</tool>

@@ -1,0 +1,6 @@
+<tool name="py2-tensorflow" version="1.6.0-pafccj3">
+  <client>
+    <environment name="PY2_TENSORFLOW_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-tensorflow/1.6.0-pafccj3"/>
+  </client>
+  <runtime name="PATH" value="$PY2_TENSORFLOW_BASE/bin" type="path"/>
+</tool>

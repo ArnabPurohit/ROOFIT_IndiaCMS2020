@@ -1,0 +1,6 @@
+  <tool name="distcc-ccompiler" version="3.2rc1-pafccj" type="compiler">
+    <use name="gcc-ccompiler"/>
+    <client>
+      <environment name="CC" value="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/distcc/3.2rc1-pafccj/bin/gcc"/>
+    </client>
+  </tool>

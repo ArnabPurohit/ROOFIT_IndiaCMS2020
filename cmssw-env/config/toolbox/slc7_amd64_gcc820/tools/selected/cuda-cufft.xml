@@ -1,0 +1,6 @@
+<tool name="cuda-cufft" version="10.1.105-pafccj2">
+  <info url="https://docs.nvidia.com/cuda/cufft/index.html"/>
+  <use name="cuda"/>
+  <lib name="cufft"/>
+  <lib name="cufftw"/>
+</tool>

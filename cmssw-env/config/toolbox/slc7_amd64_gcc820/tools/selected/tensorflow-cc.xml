@@ -1,0 +1,6 @@
+<tool name="tensorflow-cc" version="1.6.0-pafccj3">
+  <lib name="tensorflow_cc"/>
+  <use name="tensorflow-framework"/>
+  <use name="eigen"/>
+  <use name="protobuf"/>
+</tool>

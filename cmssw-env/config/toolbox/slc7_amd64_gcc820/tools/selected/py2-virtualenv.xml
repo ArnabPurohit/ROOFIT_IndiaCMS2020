@@ -1,0 +1,6 @@
+<tool name="py2-virtualenv" version="16.0.0-pafccj">
+  <client>
+    <environment name="PY2_VIRTUALENV_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-virtualenv/16.0.0-pafccj"/>
+  </client>
+  <runtime name="PATH" value="$PY2_VIRTUALENV_BASE/bin" type="path"/>
+</tool>

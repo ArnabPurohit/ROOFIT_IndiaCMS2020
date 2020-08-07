@@ -1,0 +1,15 @@
+#!/bin/bash
+#Each line, with valid format, printed on STDOUT will be interpreted by SCRAM
+#and runtime environment will be updated. Valid formats are
+#1. append, prepend, remove a PATH type variable e.g
+#RUNTIME:path:prepend|append|remove:VARIABLE_NAME=VALUE
+#2. Set a environment variable e.g.
+#RUNTIME:variable:VARIABLE_NAME=VALUE"
+
+SCRIPT_DIR=$(dirname $0)
+if [ -e ${SCRIPT_DIR}/runtime ] ; then
+  for tool in $(find ${SCRIPT_DIR}/runtime -type f | sort) ; do
+    [ -x $tool ] && $tool
+  done
+fi
+

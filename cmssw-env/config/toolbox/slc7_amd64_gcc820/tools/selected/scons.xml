@@ -1,0 +1,9 @@
+<tool name="scons" version="3.0.1-pafccj">
+  <info url="http://prdownloads.sourceforge.net/scons/"/>
+  <client>
+    <environment name="SCONS_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/scons/3.0.1-pafccj"/>
+    <environment name="BINDIR" default="$SCONS_BASE/bin"/>
+  </client>
+  <runtime name="SCONS_LIB_DIR" value="$SCONS_BASE/lib"/>
+  <runtime name="PATH" value="$SCONS_BASE/bin" type="path"/>
+</tool>

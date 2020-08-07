@@ -1,0 +1,6 @@
+<tool name="py2-googlePackages" version="1.0-pafccj2">
+  <client>
+    <environment name="PY2_GOOGLEPACKAGES_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-googlePackages/1.0-pafccj2"/>
+  </client>
+  <runtime name="PATH" value="$PY2_GOOGLEPACKAGES_BASE/bin" type="path"/>
+</tool>

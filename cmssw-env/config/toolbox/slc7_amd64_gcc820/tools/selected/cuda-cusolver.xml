@@ -1,0 +1,5 @@
+<tool name="cuda-cusolver" version="10.1.105-pafccj2">
+  <info url="https://docs.nvidia.com/cuda/cusolver/index.html"/>
+  <use name="cuda"/>
+  <lib name="cusolver"/>
+</tool>

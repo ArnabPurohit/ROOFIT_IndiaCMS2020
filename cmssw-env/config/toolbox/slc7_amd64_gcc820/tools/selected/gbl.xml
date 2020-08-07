@@ -1,0 +1,10 @@
+<tool name="gbl" version="V02-01-03-pafccj">
+  <info url="https://www.wiki.terascale.de/index.php/GeneralBrokenLines"/>
+  <lib name="GBL"/>
+  <client>
+    <environment name="GBL_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/gbl/V02-01-03-pafccj"/>
+    <environment name="LIBDIR" default="$GBL_BASE/lib"/>
+    <environment name="INCLUDE" default="$GBL_BASE/include"/>
+  </client>
+  <use name="eigen"/>
+</tool>

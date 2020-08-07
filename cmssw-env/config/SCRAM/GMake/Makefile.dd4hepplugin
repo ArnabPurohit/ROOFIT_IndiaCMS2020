@@ -1,0 +1,25 @@
+define dd4hep_register_plugin
+  @$(startlog_$(2)) \
+  if [ -f $< ] ; then \
+    [ -d $(@D) ] || $(CMD_mkdir) -p $(@D) &&\
+    $(DD4HEP_CORE_BASE)/bin/listcomponents $< | $(CMD_sed) 's|.*/$(<F):|$(<F):|' > $(<D)/$(@F) &&\
+    ($(call install_name_tool_rpath,$(LOCALTOP)/$(@D),$<) &&\
+    ($(call install_name_tool,@rpath/$(<F),$<) && $(CMD_cp) -f $< $(@D)/$(<F)) || ($(CMD_rm) -f $< $@ $(@D)/$(<F) && exit 1)) &&\
+    $(CMD_cp) -f $(<D)/$(@F) $@ &&\
+    $(CMD_echo) "01:$(CMD_rm) -f $(@D)/$(<F) $@" > $(call AutoCleanFile,$<,edm) &&\
+    $(CMD_echo) "--- Registered DD4HEP Plugin: $(1)"; \
+  else \
+    $(CMD_rm) -f $@ $(@D)/$(<F) ;\
+  fi $(endlog_$(2))
+endef
+
+define edm_plugin_clean
+  $(call clean_prod,$($(1)_plugindir)/lib$(1).$(SHAREDSUFFIX))
+  $(call clean_prod,$($(1)_pluginprod))
+endef
+
+define dd4hepPlugin
+$$(eval $$(call addPlugin,$1,$2,dd4hep,yes,$3,,,lib$(1).components,$1,$4))
+endef
+
+

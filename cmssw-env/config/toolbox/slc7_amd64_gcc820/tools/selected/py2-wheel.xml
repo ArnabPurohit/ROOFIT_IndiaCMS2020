@@ -1,0 +1,6 @@
+<tool name="py2-wheel" version="0.33.1">
+  <client>
+    <environment name="PY2_WHEEL_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-wheel/0.33.1"/>
+  </client>
+  <runtime name="PATH" value="$PY2_WHEEL_BASE/bin" type="path"/>
+</tool>

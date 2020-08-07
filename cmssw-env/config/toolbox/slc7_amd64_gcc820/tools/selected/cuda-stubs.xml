@@ -1,0 +1,10 @@
+<tool name="cuda-stubs" version="10.1.105-pafccj2">
+  <info url="https://docs.nvidia.com/cuda/index.html"/>
+  <lib name="cuda"/>
+  <client>
+    <environment name="CUDA_STUBS_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/cuda/10.1.105-pafccj2"/>
+    <environment name="LIBDIR"          default="$CUDA_STUBS_BASE/lib64/stubs"/>
+    <environment name="INCLUDE"         default="$CUDA_STUBS_BASE/include"/>
+  </client>
+  <flags SKIP_TOOL_SYMLINKS="1"/>
+</tool>

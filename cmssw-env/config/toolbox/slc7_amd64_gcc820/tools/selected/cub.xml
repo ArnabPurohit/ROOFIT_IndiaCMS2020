@@ -1,0 +1,8 @@
+<tool name="cub" version="1.8.0-pafccj4">
+  <use name="cuda"/>
+  <client>
+    <environment name="CUB_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/cub/1.8.0-pafccj4"/>
+    <environment name="INCLUDE"  default="$CUB_BASE/include"/>
+  </client>
+  <flags CXXFLAGS="-DCUB_STDERR"/>
+</tool>

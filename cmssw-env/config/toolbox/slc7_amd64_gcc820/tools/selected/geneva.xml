@@ -1,0 +1,19 @@
+<tool name="geneva" version="1.0-RC3-pafccj3">
+  <client>
+    <environment name="GENEVA_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/geneva/1.0-RC3-pafccj3"/>
+    <environment name="BINDIR" default="$GENEVA_BASE/bin"/>
+    <environment name="LIBDIR" default="$GENEVA_BASE/lib"/>
+    <environment name="INCLUDE" default="$GENEVA_BASE/include/Geneva"/>
+  </client>
+  <runtime name="PATH" value="$GENEVA_BASE/bin" type="path"/>
+  <runtime name="GENEVA_DATA_DIR" value="$GENEVA_BASE/share/Geneva" type="path"/>
+  <use name="root_cxxdefaults"/>
+  <use name="python"/>
+  <use name="py2-numpy"/>
+  <use name="HepMC"/>
+  <use name="lhapdf"/>
+  <use name="openloops"/>
+  <use name="gsl"/>
+  <use name="boost"/>
+  <use name="pythia8"/>
+</tool>

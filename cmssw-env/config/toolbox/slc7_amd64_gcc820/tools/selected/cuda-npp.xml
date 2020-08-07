@@ -1,0 +1,16 @@
+<tool name="cuda-npp" version="10.1.105-pafccj2">
+  <info url="https://docs.nvidia.com/cuda/npp/index.html"/>
+  <use name="cuda"/>
+  <lib name="nppial"/>
+  <lib name="nppicc"/>
+  <lib name="nppicom"/>
+  <lib name="nppidei"/>
+  <lib name="nppif"/>
+  <lib name="nppig"/>
+  <lib name="nppim"/>
+  <lib name="nppist"/>
+  <lib name="nppisu"/>
+  <lib name="nppitc"/>
+  <lib name="npps"/>
+  <lib name="nppc"/>
+</tool>

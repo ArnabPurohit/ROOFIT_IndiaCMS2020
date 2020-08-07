@@ -1,0 +1,12 @@
+<tool name="hdf5" version="1.8.17-pafccj">
+  <info url="https://support.hdfgroup.org/HDF5/"/>
+  <lib name="hdf5"/>
+  <lib name="hdf5_cpp"/>
+  <lib name="hdf5_hl"/>
+  <lib name="hdf5_hl_cpp"/>
+  <client>
+    <environment name="HDF5_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/hdf5/1.8.17-pafccj"/>
+    <environment name="LIBDIR" default="$HDF5_BASE/lib"/>
+    <environment name="INCLUDE" default="$HDF5_BASE/include"/>
+  </client>
+</tool>

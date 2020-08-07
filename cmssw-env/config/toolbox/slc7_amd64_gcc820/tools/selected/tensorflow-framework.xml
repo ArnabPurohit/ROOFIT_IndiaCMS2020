@@ -1,0 +1,4 @@
+<tool name="tensorflow-framework" version="1.6.0-pafccj3">
+  <lib name="tensorflow_framework"/>
+  <use name="tensorflow"/>
+</tool>

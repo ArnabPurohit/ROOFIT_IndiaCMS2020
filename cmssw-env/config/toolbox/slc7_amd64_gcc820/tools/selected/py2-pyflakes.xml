@@ -1,0 +1,6 @@
+<tool name="py2-pyflakes" version="2.1.1">
+  <client>
+    <environment name="PY2_PYFLAKES_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-pyflakes/2.1.1"/>
+  </client>
+  <runtime name="PATH" value="$PY2_PYFLAKES_BASE/bin" type="path"/>
+</tool>

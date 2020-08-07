@@ -1,0 +1,6 @@
+<tool name="py2-onnx" version="1.5.0">
+  <client>
+    <environment name="PY2_ONNX_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-onnx/1.5.0"/>
+  </client>
+  <runtime name="PATH" value="$PY2_ONNX_BASE/bin" type="path"/>
+</tool>

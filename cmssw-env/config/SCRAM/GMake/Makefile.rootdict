@@ -1,0 +1,57 @@
+# Root Dictionary compilation
+define compile_rootdict
+  $(call compile_cxx_common,$1,$2,$(call AdjustFlags,$1,ROOTDICT,CPPFLAGS CXXFLAGS),root dictionary,|| ($(CMD_rm) -f $< && exit 1))
+  @$(startlog_$(2))$(call processTmpMMDData,$<,$@,$3)$(endlog_$(2))
+endef
+
+# ROOT dictionary generation
+define generate_rootdict
+  @$(startlog_$(2))[ -d $(@D) ] ||  $(CMD_mkdir) -p $(@D) &&\
+  $(CMD_echo) ">> Building Root dict from header file $< " &&\
+  $(VERB_ECHO) $(ROOTCINT) -f $@ $(if $(strip $(GENERATE_ROOT_PCMS)),$(call Tool_DependencyPCMS,$1)) -c -p -DGNU_SOURCE $(call AdjustFlags,$1,ROOTDICT,CPPFLAGS) $(patsubst $(SCRAM_SOURCEDIR)/%,%,$<) &&\
+  (            $(ROOTCINT) -f $@ $(if $(strip $(GENERATE_ROOT_PCMS)),$(call Tool_DependencyPCMS,$1)) -c -p -DGNU_SOURCE $(call AdjustFlags,$1,ROOTDICT,CPPFLAGS) $(patsubst $(SCRAM_SOURCEDIR)/%,%,$<) || ($(CMD_rm) -f $@ && exit 1)) &&\
+  $(CMD_mv) $@ $@.base	&&\
+  $(CMD_cat) $< $@.base > $@ &&\
+  $(CMD_rm) -f $@.base $(endlog_$(2))
+endef
+
+define addPCMRule
+ifeq ($(strip $(GENERATE_ROOT_PCMS)),yes)
+all_$(1)  += $(4)/$(2)r_rdict.pcm
+$(3)/$(2)r_rdict.pcm: $(3)/$(2)r.cc
+	@[ -f $$< ] || $(CMD_rm) -f $$@
+	@$(CMD_touch) $$@
+$(4)/$(2)r_rdict.pcm: $(3)/$(2)r_rdict.pcm
+	@if [ -f $$< ] ; then \
+	  $(CMD_cp) $$< $$@ &&\
+	  $(CMD_echo) "01:$(CMD_rm) -f $$@" > $$(call AutoCleanFile,$$<,prod) ;\
+	else \
+	  $(CMD_rm) -f $$@;\
+	fi
+endif
+endef
+
+#safename,linkdefs,subdir,prodstore,rootdicts
+define AddRootDictRule
+$(if $(2),$(eval $(call RootDictRule,$(1),$(ROOTDICT_FILE_PREFIX)$(firstword $(2)),$(firstword $(3)),$(4),$(5)))$(eval $$(call AddRootDictRule,$(1),$(wordlist 2,100,$(2)),$(wordlist 2,100,$(3)),$(4),$(5))),)
+endef
+
+#safename,rootdict,linkdef,subdir,prodstore
+define RootDictRule
+$(1)_files  := $($(1)_objdir)/$(4)/$(2)r.cc $($(1)_files)
+$(1)_objs   := $($(1)_objdir)/$(4)/$(2)r.cc.$(OBJEXT) $($(1)_objs)
+$(1)_extra_files += $($(1)_objdir)/$(4)/$(2)r.cc
+.PRECIOUS: $($(1)_objdir)/$(4)/$(2)r.cc
+$($(1)_objdir)/$(4)/$(2)r.cc: $(3) $($(1)_config)
+	$$(call generate_rootdict,$(1),$(1))
+$($(1)_objdir)/$(4)/$(2)r.cc.$(OBJEXT): $($(1)_objdir)/$(4)/$(2)r.cc
+	$$(call compile_rootdict,$(1),$(1),$(3))
+$(eval $(call addPCMRule,$1,$2,$($(1)_objdir)/$(4),$(5)))
+endef
+
+#safename,path,linkdefs,prodstore
+define RootDict
+$(1)_LOC_FLAGS_CPPFLAGS     += -I$(LOCALTOP)/$(2)
+$(eval $(call AddRootDictRule,$(1),$($(1)_ROOTDICTS),$(addprefix $2/,$(3)),b,$(4)))
+endef
+

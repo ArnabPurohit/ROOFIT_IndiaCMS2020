@@ -1,0 +1,8 @@
+  <tool name="gcc-ccompiler" version="8.2.0-pafccj" type="compiler">
+    <client>
+      <environment name="GCC_CCOMPILER_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/gcc/8.2.0-pafccj"/>
+      <environment name="CC" value="$GCC_CCOMPILER_BASE/bin/gcc"/>
+    </client>
+    <flags CSHAREDOBJECTFLAGS="-fPIC   "/>
+    <flags CFLAGS="-O2 -pthread   "/>
+  </tool>

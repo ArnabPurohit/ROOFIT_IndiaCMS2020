@@ -1,0 +1,6 @@
+  <tool name="distcc-cxxcompiler" version="3.2rc1-pafccj" type="compiler">
+    <use name="gcc-cxxcompiler"/>
+    <client>
+      <environment name="CXX" value="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/distcc/3.2rc1-pafccj/bin/c++"/>
+    </client>
+  </tool>

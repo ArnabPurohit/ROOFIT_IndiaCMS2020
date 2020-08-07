@@ -1,0 +1,6 @@
+<tool name="py2-pip" version="9.0.3-pafccj">
+  <client>
+    <environment name="PY2_PIP_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-pip/9.0.3-pafccj"/>
+  </client>
+  <runtime name="PATH" value="$PY2_PIP_BASE/bin" type="path"/>
+</tool>

@@ -1,0 +1,28 @@
+#!/bin/bash -e
+CUDA_BASE=$(${SCRAM} tool tag cuda CUDA_BASE 2>&1 | grep -v 'SCRAM error' || true)
+if [ ! "${CUDA_BASE}" ] ; then exit 0; fi
+if [ ! -e "${CUDA_BASE}" ] ; then exit 0; fi
+
+NVIDIA_VERSION=
+
+# first, check if the module is loaded and exported on /proc
+if [ -f /proc/driver/nvidia/version ]; then
+  NVIDIA_VERSION=`cat /proc/driver/nvidia/version | sed -ne's/.*Kernel Module *\([0-9.]\+\).*/\1/p'`
+else 
+  # check if a kernel module is available, even if not currently loaded (e.g. for an OPTIMUS system)
+  # if there are multiple modules, pick the newest one
+  NVIDIA_MODULE=`modprobe -q -R nvidia 2>/dev/null || true`
+  if [ "$NVIDIA_MODULE" ]; then
+    NVIDIA_VERSION=`modinfo "$NVIDIA_MODULE" | grep '^version:' | sed 's|.*:\s*||;s|\s*$||'`
+  fi
+fi
+
+if [ "$NVIDIA_VERSION" ]; then
+  # if a driver is available, assume that a library is available as well
+  true
+else
+  # otherwise, use the library packaged with CMSSW
+  if [ -e "${CUDA_BASE}/drivers" ] ; then
+    echo "RUNTIME:path:append:LD_LIBRARY_PATH=${CUDA_BASE}/drivers"
+  fi
+fi

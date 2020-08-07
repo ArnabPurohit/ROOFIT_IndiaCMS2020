@@ -1,0 +1,6 @@
+<tool name="py2-pybind11" version="2.2.4-pafccj">
+  <client>
+    <environment name="PY2_PYBIND11_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-pybind11/2.2.4-pafccj"/>
+    <environment name="INCLUDE" default="$PY2_PYBIND11_BASE/include/python2.7"/>
+  </client>
+</tool>

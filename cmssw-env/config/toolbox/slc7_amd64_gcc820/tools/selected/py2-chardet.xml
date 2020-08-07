@@ -1,0 +1,6 @@
+<tool name="py2-chardet" version="3.0.4-pafccj">
+  <client>
+    <environment name="PY2_CHARDET_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-chardet/3.0.4-pafccj"/>
+  </client>
+  <runtime name="PATH" value="$PY2_CHARDET_BASE/bin" type="path"/>
+</tool>

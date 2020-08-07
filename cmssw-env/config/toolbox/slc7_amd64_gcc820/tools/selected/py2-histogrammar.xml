@@ -1,0 +1,6 @@
+<tool name="py2-histogrammar" version="1.0.9-pafccj">
+  <client>
+    <environment name="PY2_HISTOGRAMMAR_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-histogrammar/1.0.9-pafccj"/>
+  </client>
+  <runtime name="PATH" value="$PY2_HISTOGRAMMAR_BASE/bin" type="path"/>
+</tool>

@@ -1,0 +1,6 @@
+  <tool name="gcc-checker-plugin" version="1.2-pafccj">
+    <client>
+      <environment name="GCC_CHECKER_PLUGIN_ROOT" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/gcc-checker-plugin/1.2-pafccj"/>
+      <environment name="INCLUDE"   default="$GCC_CHECKER_PLUGIN_ROOT/include"/>
+    </client>
+  </tool>

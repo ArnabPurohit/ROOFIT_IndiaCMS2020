@@ -1,0 +1,5 @@
+<tool name="cuda-nvml" version="10.1.105-pafccj2">
+  <info url="https://docs.nvidia.com/deploy/nvml-api/index.html"/>
+  <use name="cuda"/>
+  <lib name="nvidia-ml"/>
+</tool>

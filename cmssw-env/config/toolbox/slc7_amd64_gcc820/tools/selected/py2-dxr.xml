@@ -1,0 +1,7 @@
+<tool name="py2-dxr" version="1.0-pafccj4">
+  <client>
+    <environment name="PY2_DXR_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-dxr/1.0-pafccj4"/>
+    <environment name="LIBDIR" default="$PY2_DXR_BASE/lib"/>
+  </client>
+  <runtime name="PATH" value="$PY2_DXR_BASE/bin" type="path"/>
+</tool>

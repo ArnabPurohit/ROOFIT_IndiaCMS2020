@@ -1,0 +1,6 @@
+<tool name="py2-nbformat" version="4.4.0-pafccj2">
+  <client>
+    <environment name="PY2_NBFORMAT_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-nbformat/4.4.0-pafccj2"/>
+  </client>
+  <runtime name="PATH" value="$PY2_NBFORMAT_BASE/bin" type="path"/>
+</tool>

@@ -1,0 +1,9 @@
+<tool name="toprex" version="4.23-pafccj">
+  <lib name="toprex"/>
+  <client>
+    <environment name="TOPREX_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/toprex/4.23-pafccj"/>
+    <environment name="LIBDIR" default="$TOPREX_BASE/lib"/>
+  </client>
+  <use name="toprex_headers"/>
+  <use name="f77compiler"/>
+</tool>

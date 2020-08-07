@@ -1,0 +1,6 @@
+<tool name="py2-lizard" version="1.16.3">
+  <client>
+    <environment name="PY2_LIZARD_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-lizard/1.16.3"/>
+  </client>
+  <runtime name="PATH" value="$PY2_LIZARD_BASE/bin" type="path"/>
+</tool>

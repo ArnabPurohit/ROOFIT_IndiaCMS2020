@@ -1,0 +1,13 @@
+<tool name="vincia" version="2.2.04-pafccj3">
+  <lib name="vincia"/>
+  <lib name="VinciaMG4"/>
+  <lib name="VinciaMG5"/>
+  <client>
+    <environment name="VINCIA_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/vincia/2.2.04-pafccj3"/>
+    <environment name="LIBDIR" default="$VINCIA_BASE/lib"/>
+    <environment name="INCLUDE" default="$VINCIA_BASE/include"/>
+  </client>
+  <runtime name="VINCIADATA" value="$VINCIA_BASE/share/Vincia/xmldoc"/>
+  <use name="root_cxxdefaults"/>
+  <use name="pythia8"/>
+</tool>

@@ -1,0 +1,6 @@
+<tool name="cvs2git" version="5419-pafccj">
+  <client>
+    <environment name="CVS2GIT_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/cvs2git/5419-pafccj"/>
+  </client>
+  <runtime name="PATH" value="$CVS2GIT_BASE/bin" type="path"/>
+</tool>

@@ -1,0 +1,6 @@
+<tool name="py2-sympy" version="1.4">
+  <client>
+    <environment name="PY2_SYMPY_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-sympy/1.4"/>
+  </client>
+  <runtime name="PATH" value="$PY2_SYMPY_BASE/bin" type="path"/>
+</tool>

@@ -1,0 +1,9 @@
+<tool name="tensorflow" version="1.6.0-pafccj3">
+  <client>
+    <environment name="TENSORFLOW_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/tensorflow/1.6.0-pafccj3"/>
+    <environment name="LIBDIR" default="$TENSORFLOW_BASE/lib"/>
+    <environment name="INCLUDE" default="$TENSORFLOW_BASE/include"/>
+    <environment name="TFCOMPILE" default="$TENSORFLOW_BASE/bin/tfcompile"/>
+  </client>
+  <runtime name="PATH" value="$TENSORFLOW_BASE/bin" type="path"/>
+</tool>

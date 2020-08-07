@@ -1,0 +1,6 @@
+<tool name="py2-notebook" version="5.7.8-pafccj">
+  <client>
+    <environment name="PY2_NOTEBOOK_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-notebook/5.7.8-pafccj"/>
+  </client>
+  <runtime name="PATH" value="$PY2_NOTEBOOK_BASE/bin" type="path"/>
+</tool>

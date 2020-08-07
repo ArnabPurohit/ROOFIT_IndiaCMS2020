@@ -1,0 +1,24 @@
+# CondFormat Serialization generation
+define generate_CondSerialization
+  @$(startlog_$(2))[ -d $(@D) ] ||  $(CMD_mkdir) -p $(@D) &&\
+  $(CMD_echo) ">> Generating CondFormat Serialization code from header file $< " &&\
+  $(VERB_ECHO) $(COND_SERIALIZATION_SCRIPT) --output $(LOCALTOP)/$@ --package $(dir $3) -- $(call AdjustFlags,$1,,CPPFLAGS CXXFLAGS,llvm-cxxcompiler) &&\
+  (            $(COND_SERIALIZATION_SCRIPT) --output $(LOCALTOP)/$@ --package $(dir $3) -- $(call AdjustFlags,$1,,CPPFLAGS CXXFLAGS,llvm-cxxcompiler) || ($(CMD_rm) -f $@ && exit 1)) $(endlog_$(2))
+endef
+
+#safename,$path,$file
+define CondSerialization
+ifneq ($$(strip $$(COND_SERIALIZATION_SCRIPT)),)
+$(1)_LOC_FLAGS_CPPFLAGS     += -I$(LOCALTOP)/$(2)
+$(1)_files                  += $($(1)_objdir)/a/Serialization.cc
+$(1)_objs                   += $($(1)_objdir)/a/Serialization.cc.$(OBJEXT)
+.PRECIOUS: $($(1)_objdir)/a/Serialization.cc
+$(1)_extra_files += $($(1)_objdir)/a/Serialization.cc
+$($(1)_objdir)/a/Serialization.cc: $3 $($(1)_config) $$(COND_SERIALIZATION_SCRIPT)
+	$$(call generate_CondSerialization,$(1),$(1),$(2))
+$($(1)_objdir)/a/Serialization.cc.$(OBJEXT): $($(1)_objdir)/a/Serialization.cc
+	$$(call compile_cxx,$(1),$(1))
+	@$(startlog_$(1)) $$(call processTmpMMDData,$$<,$$@,$3) $(endlog_$(1))
+endif
+endef
+

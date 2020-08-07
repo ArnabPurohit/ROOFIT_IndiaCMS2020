@@ -1,0 +1,6 @@
+<tool name="py2-autopep8" version="1.4.4">
+  <client>
+    <environment name="PY2_AUTOPEP8_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-autopep8/1.4.4"/>
+  </client>
+  <runtime name="PATH" value="$PY2_AUTOPEP8_BASE/bin" type="path"/>
+</tool>

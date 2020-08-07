@@ -1,0 +1,6 @@
+<tool name="py2-jsonschema" version="2.6.0-pafccj">
+  <client>
+    <environment name="PY2_JSONSCHEMA_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-jsonschema/2.6.0-pafccj"/>
+  </client>
+  <runtime name="PATH" value="$PY2_JSONSCHEMA_BASE/bin" type="path"/>
+</tool>

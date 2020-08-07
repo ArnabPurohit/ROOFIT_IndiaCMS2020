@@ -1,0 +1,5 @@
+<tool name="boost_system" version="1.67.0-pafccj">
+  <info url="http://www.boost.org"/>
+  <lib name="boost_system"/>
+  <use name="boost"/>
+</tool>

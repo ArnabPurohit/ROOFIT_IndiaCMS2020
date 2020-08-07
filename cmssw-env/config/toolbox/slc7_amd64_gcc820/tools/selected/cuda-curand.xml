@@ -1,0 +1,5 @@
+<tool name="cuda-curand" version="10.1.105-pafccj2">
+  <info url="https://docs.nvidia.com/cuda/curand/index.html"/>
+  <use name="cuda"/>
+  <lib name="curand"/>
+</tool>

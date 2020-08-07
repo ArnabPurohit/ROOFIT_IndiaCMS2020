@@ -1,0 +1,6 @@
+  <tool name="gcc-atomic" version="8.2.0-pafccj">
+    <lib name="atomic"/>
+    <client>
+      <environment name="GCC_ATOMIC_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/gcc/8.2.0-pafccj"/>
+    </client>
+  </tool>

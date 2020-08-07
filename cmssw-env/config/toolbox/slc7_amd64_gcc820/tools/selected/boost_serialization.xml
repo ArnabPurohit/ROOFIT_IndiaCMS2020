@@ -1,0 +1,5 @@
+<tool name="boost_serialization" version="1.67.0-pafccj">
+  <info url="http://www.boost.org"/>
+  <lib name="boost_serialization"/>
+  <use name="boost"/>
+</tool>
