@@ -1,6 +1,0 @@
-<tool name="py2-rootpy" version="1.0.1-pafccj4">
-  <client>
-    <environment name="PY2_ROOTPY_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-rootpy/1.0.1-pafccj4"/>
-  </client>
-  <runtime name="PATH" value="$PY2_ROOTPY_BASE/bin" type="path"/>
-</tool>

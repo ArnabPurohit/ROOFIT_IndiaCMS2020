@@ -1,7 +1,0 @@
-<tool name="tcmalloc" version="2.6.1-pafccj">
-  <lib name="tcmalloc"/>
-  <client>
-    <environment name="TCMALLOC_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/gperftools/2.6.1-pafccj"/>
-    <environment name="LIBDIR"        default="$TCMALLOC_BASE/lib"/>
-  </client>
-</tool>

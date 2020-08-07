@@ -1,6 +1,0 @@
-<tool name="py2-jupyter_console" version="5.2.0-pafccj2">
-  <client>
-    <environment name="PY2_JUPYTER_CONSOLE_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-jupyter_console/5.2.0-pafccj2"/>
-  </client>
-  <runtime name="PATH" value="$PY2_JUPYTER_CONSOLE_BASE/bin" type="path"/>
-</tool>

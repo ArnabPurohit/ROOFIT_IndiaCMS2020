@@ -1,7 +1,0 @@
-<tool name="sip" version="4.17-pafccj">
-  <info url="http://www.riverbankcomputing.co.uk/software/sip/intro"/>
-  <client>
-    <environment name="SIP_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/sip/4.17-pafccj"/>
-  </client>
-  <use name="python"/>
-</tool>

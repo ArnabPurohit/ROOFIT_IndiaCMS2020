@@ -1,6 +1,0 @@
-<tool name="py2-Theano" version="1.0.4-pafccj2">
-  <client>
-    <environment name="PY2_THEANO_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-Theano/1.0.4-pafccj2"/>
-  </client>
-  <runtime name="PATH" value="$PY2_THEANO_BASE/bin" type="path"/>
-</tool>

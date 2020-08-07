@@ -1,6 +1,0 @@
-<tool name="py2-tqdm" version="4.31.1">
-  <client>
-    <environment name="PY2_TQDM_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-tqdm/4.31.1"/>
-  </client>
-  <runtime name="PATH" value="$PY2_TQDM_BASE/bin" type="path"/>
-</tool>

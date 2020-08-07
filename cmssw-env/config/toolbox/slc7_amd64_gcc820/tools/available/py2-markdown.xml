@@ -1,6 +1,0 @@
-<tool name="py2-Markdown" version="3.1">
-  <client>
-    <environment name="PY2_MARKDOWN_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-Markdown/3.1"/>
-  </client>
-  <runtime name="PATH" value="$PY2_MARKDOWN_BASE/bin" type="path"/>
-</tool>

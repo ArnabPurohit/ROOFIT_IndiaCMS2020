@@ -1,7 +1,0 @@
-  <tool name="sloccount" version="2.26-pafccj">
-    <info url="http://www.dwheeler.com/sloccount/"/>
-    <client>
-      <environment name="SLOCCOUNT_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/sloccount/2.26-pafccj"/>
-    </client>
-    <runtime name="PATH" value="$SLOCCOUNT_BASE/bin" type="path"/>
-  </tool>

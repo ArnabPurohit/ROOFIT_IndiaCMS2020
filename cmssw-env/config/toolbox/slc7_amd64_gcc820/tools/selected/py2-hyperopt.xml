@@ -1,6 +1,0 @@
-<tool name="py2-hyperopt" version="0.1.2-pafccj">
-  <client>
-    <environment name="PY2_HYPEROPT_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/py2-hyperopt/0.1.2-pafccj"/>
-  </client>
-  <runtime name="PATH" value="$PY2_HYPEROPT_BASE/bin" type="path"/>
-</tool>

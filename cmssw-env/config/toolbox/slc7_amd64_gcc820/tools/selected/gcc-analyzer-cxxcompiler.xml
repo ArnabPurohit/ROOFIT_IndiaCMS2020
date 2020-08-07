@@ -1,8 +1,0 @@
-  <tool name="gcc-analyzer-cxxcompiler" version="1.2-pafccj" type="compiler">
-    <client>
-      <environment name="CXX"   default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/gcc/8.2.0-pafccj/bin/c++"/>
-    </client>
-  </tool>
-  <flags CXXFLAGS="-fplugin=/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/gcc-checker-plugin/1.2-pafccj/lib/libchecker_gccplugins.so"/>
-  <flags CXXFLAGS="-fplugin-arg-libchecker_gccplugins-checkers=all"/>
-  <flags CXXFLAGS="-fsyntax-only"/>

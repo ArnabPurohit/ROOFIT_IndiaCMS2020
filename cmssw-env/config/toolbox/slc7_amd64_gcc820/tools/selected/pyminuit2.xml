@@ -1,5 +1,0 @@
-<tool name="pyminuit2" version="0.0.1-pafccj4">
-<client>
-<environment name="PYMINUIT2_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/pyminuit2/0.0.1-pafccj4"/>
-</client>
-</tool>

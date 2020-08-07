@@ -1,3 +1,0 @@
-<tool name="codechecker" version="0.1-pafccj2">
-  <runtime name="PATH" value="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/codechecker/0.1-pafccj2/bin" type="path"/>
-</tool>

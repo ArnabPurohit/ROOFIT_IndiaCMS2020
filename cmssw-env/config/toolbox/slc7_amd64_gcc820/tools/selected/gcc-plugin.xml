@@ -1,8 +1,0 @@
-  <tool name="gcc-plugin" version="8.2.0-pafccj">
-    <lib name="cc1plugin cp1plugin"/>
-    <client>
-      <environment name="GCC_PLUGIN_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/gcc/8.2.0-pafccj/lib/gcc/x86_64-unknown-linux-gnu/8.3.1/plugin"/>
-      <environment name="INCLUDE"   default="$GCC_PLUGIN_BASE/include"/>
-      <environment name="LIBDIR"    default="$GCC_PLUGIN_BASE"/>
-    </client>
-  </tool>

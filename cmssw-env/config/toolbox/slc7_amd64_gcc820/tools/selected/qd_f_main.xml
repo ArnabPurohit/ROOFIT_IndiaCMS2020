@@ -1,4 +1,0 @@
-<tool name="qd_f_main" version="2.3.13-pafccj">
-  <lib name="qd_f_main"/>
-  <use name="qd"/>
-</tool>

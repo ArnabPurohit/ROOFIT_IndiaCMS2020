@@ -1,8 +1,0 @@
-<tool name="openldap" version="2.4.45-pafccj">
-  <client>
-    <environment name="OPENLDAP_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/openldap/2.4.45-pafccj"/>
-    <environment name="LIBDIR" default="$OPENLDAP_BASE/lib"/>
-  </client>
-  <use name="openssl"/>
-  <use name="db6"/>
-</tool>

@@ -1,6 +1,0 @@
-<tool name="lapack" version="3.6.1-pafccj">
-  <client>
-    <environment name="LAPACK_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/lapack/3.6.1-pafccj"/>
-    <environment name="LIBDIR" default="$LAPACK_BASE/lib64"/>
-  </client>
-</tool>

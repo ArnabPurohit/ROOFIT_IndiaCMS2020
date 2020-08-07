@@ -1,7 +1,0 @@
-<tool name="nvidia-drivers" version="10.1.105-pafccj2">
-  <info url="https://docs.nvidia.com/cuda/index.html"/>
-  <client>
-    <environment name="NVIDIA_DRIVERS_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/cuda/10.1.105-pafccj2"/>
-    <environment name="LIBDIR"              default="$NVIDIA_DRIVERS_BASE/drivers"/>
-  </client>
-</tool>

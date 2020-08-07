@@ -1,7 +1,0 @@
-<tool name="eigen" version="e4c107b451c52c9ab2d7b7fa4194ee35332916ec-pafccj">
-  <client>
-    <environment name="EIGEN_BASE"   default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/eigen/e4c107b451c52c9ab2d7b7fa4194ee35332916ec-pafccj"/>
-    <environment name="INCLUDE"      default="$EIGEN_BASE/include/eigen3"/>
-  </client>
-  <flags CPPDEFINES="EIGEN_DONT_PARALLELIZE"/>
-</tool>
