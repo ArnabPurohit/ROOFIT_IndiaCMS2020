@@ -8,7 +8,11 @@ This is a tutorial on ROOFIT for the India-CMS 2020 lecture series. They are int
 
 0. ['setup_libraries.ipynb'](setup_libraries.ipynb): setting up libraries using 'CMSSW'
 1. ['Exercise01.ipynb'](Exercise01.ipynb): Creating PDF and generating and fitting data with the model.
-2. ['Exercise02.ipynb'](Exercise02.ipynb): Importing data from 'ROOT' files.
+2. ['Exercise02.ipynb'](Exercise02.ipynb): Importing ROOT data from 'RooFit'.
+3. ['Exercise03.ipynb'](Exercise03.ipynb): Convolution of two pdfs.
+2. ['Exercise04.ipynb'](Exercise04.ipynb): Introduction to Workspace in RooFit.
+5. ['Exercise05.ipynb'](Exercise05.ipynb): MC template fit.
+6. ['Exercise06.ipynb'](Exercise06.ipynb): Simultaneous fit.
 
 ## Setup
 
